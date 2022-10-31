@@ -23,7 +23,5 @@ def get_weather_data(
 if __name__ == "__main__":
 
     df = get_weather_data()
-    # df = pd.read_csv(
-    #     "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/california/2019-01-01/2020-12-31?unitGroup=metric&include=days&key=GJGGYNTW6FW3LZAJBHLHSUVY9&contentType=csv"
-    # )
+    os.makedirs('data')
     df.to_csv(os.path.join("data", "weather_data.csv"))
